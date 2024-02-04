@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mon ecole</title>
+  <link rel="stylesheet" type="text/css" href="css/css.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="js/js.min.js"></script>
+	<style type="text/css">
+		.formulaire{
+			width: 60%;
+		}
+	</style>
+</head>
+<body>
+<header class="topbar">
+	 <nav class="topbar-nav">
+	  <div class="topbar-logo">
+		<img src="images/logo.jpeg" width="250px" height="auto"></div>
+	  </div>
+	  <div class="performances">
+		 <div class="accueil active">
+		  <a href="index.html">Accueil</a>
+	   </div>
+		 <div class="superieur">
+		  <a href="universite.html">Espace Université</a>
+		 </div>
+		 <div class="superieur"> 
+		  <a href="grande-ecole.html">Espace grande ecole</a>
+		 </div>
+		 <div class="lypri">
+		  <a href="lycées.html">Espace lycées</a>
+		 </div>
+		 <div class="lypri">
+		  <a href="primaire.html">Espace primaire</a>
+	   </div>
+	  </div>
+</nav>
+</header>
+<div>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/universite.jpg" class="d-block w-80" alt="Etudiant">
+    </div>
+    <div class="carousel-item">
+      <img src="images/lycee.jpg" class="d-block w-80 seul" alt="lycéen">
+    </div>
+    <div class="carousel-item">
+      <img src="images/primaire.jpg" class="d-block w-75 alone" alt="eleve">
+    </div>
+  </div>
+   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="content">
+	<header class="liste">
+		<nav>
+			<ul>
+				<li><a> Supérieur
+					</a>
+				  <ul class="block">
+				  	<li><a href="grandecole.html">
+				  		Université
+				  		</a>
+				  	</li>
+				  	<li><a href="grandecole.html">
+				  		Grande école
+				  		</a>
+				  	</li>
+				  </ul>	
+				</li>
+				<li><a>Secondaire
+					</a>
+					<ul class="block">
+				  	<li><a href="cycle1.html">
+				  		1er cycle
+				  		</a>
+				  	</li>
+				  	<li><a href="cycle2.html">
+				  		2eme cycle
+				  		</a>
+				  	</li>
+				  </ul>	
+				</li>
+				<li><a>Primaire
+					</a>
+					<ul class="block">
+				  	<li><a href="cp.html">
+				  		CP
+				  		</a>
+				  	</li>
+				  	<li><a href="ce.html">
+				  		CE
+				  		</a>
+				  	</li>
+				  	<li><a href="cm.html">
+				  		CM
+				  	</a>
+				  	</li>
+				  </ul>	
+
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="formulaire">
+		<h1>Vous etes dans l'espace Grande école</h1>
+		<form action="donnes.php" method="post">
+			<fieldset>
+				<legend class="model">Grande Ecole</legend>
+				<label for="eco">Indiquez le nom de votre Ecole:</label>
+				<input type="text" name="ecole" id="eco">
+				<br><br>
+				<label for="année">Selectionnez l'année en cours:</label>
+				<select name="année" id="année">
+					<option value="2021-2022">2021-2022</option>
+					<option value="2022-2023">2022-2023</option>
+					<option value="2023-2024">2023-2024</option>
+					<option value="2024-2025">2024-2025</option>
+				</select><br><br>
+				<label for="niv">Selectionnez le niveau:</label>
+				<select name="niveau" id="niv">
+					<optgroup label="LICENCE">
+					 <option value="Licence 1">Licence 1</option>
+					 <option value="Licence 2">Licence 2</option>
+					 <option value="Licence 3">Licence 3</option>
+					</optgroup>
+					<optgroup label="MASTER">
+					 <option value="Master 1">Master 1</option>
+					 <option value="Master 2">Master 2</option>
+					</optgroup>
+					<optgroup label="DOCTORAT">
+					 <option value="2021-2022">Docteur</option>
+					</optgroup>
+				</select><br><br>
+				<label for="br">Indiquez la branche</label>
+				<input type="text" name="branche" id="br" placeholder="securité réseau"><br><br>
+				<label for="result">Envoyez un document de vos differents résultats</label>
+				<input type="file" name="fichier" id="result" accept="image/*,.pdf,.docx,. xlsx,. pptx"><br><br>
+				<button class="btn btn-outline-primary" type="submit">Envoyer</button>
+<button type="reset" class="btn btn-outline-secondary" >Reprendre</button>
+			</fieldset>
+		</form>
+	</div>
+</div>
+	<div class="bottom-bar">
+	<ul>
+		<li>Nos contacts</li>
+		<li>Signaler un probleme</li>
+	</ul>
+	<ul>
+		<li>Faites un don</li>
+	</ul>
+</div>
+</body>
+</html>

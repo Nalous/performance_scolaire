@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Scripts javascript : Aperçu</title>
+	<link rel="stylesheet" type="text/css" href="css/css.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="js/js.min.js"></script>
+	<script type="text/javascript" src=""></script>
+</head>
+<body>
+<script language="JavaScript1.2">
+//script par Randall Smith copyright 1999 - Dynamicdrive.com
+//remix par Deoxys copyright - http://antoinematyja.free.fr/graphicmedia/
+
+//  les mois
+var isnMonth = new
+Array("janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre");
+
+//  les jours
+var isnDay = new
+Array("dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche");
+
+// annee actuelle
+today = new Date() ;
+Year=today.getYear();
+if (Year < 1000)
+Year+=1900
+laDate=today.getDate();
+
+// On ecrit enfin tout ce qu on a enregistre dans le title
+function setdate(){
+document.title=" "+isnDay[today.getDay()]+" "+laDate+" "+isnMonth[today.getMonth()]+" "+Year+""
+}
+if (document.all)
+setdate()
+else if (document.getElementById)
+window.onload=setdate
+</script>
+<header class="topbar">
+	 <nav class="topbar-nav">
+	  <div class="topbar-logo">
+		<img src="images/logo.jpeg" width="250px" height="auto" class="image"></div>
+	  </div>
+	  <div class="performances">
+		 <div class="accueil active">
+		  <a href="index.html">Accueil</a>
+	   </div>
+		 <div class="superieur">
+		  <a href="universite.html">Espace Université</a>
+		 </div>
+		 <div class="superieur"> 
+		  <a href="grande-ecole.html">Espace grande ecole</a>
+		 </div>
+		 <div class="lypri">
+		  <a href="lycées.html">Espace lycées</a>
+		 </div>
+		 <div class="lypri">
+		  <a href="primaire.html">Espace primaire</a>
+	   </div>
+	  </div>
+</nav>
+</header>
+<div>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/universite.jpg" class="d-block w-80" alt="Etudiant">
+    </div>
+    <div class="carousel-item">
+      <img src="images/lycee.jpg" class="d-block w-80 seul" alt="lycéen">
+    </div>
+    <div class="carousel-item">
+      <img src="images/primaire.jpg" class="d-block w-75 alone" alt="eleve">
+    </div>
+  </div>
+   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="content">
+	<header class="liste">
+		<nav>
+			<ul>
+				<li><a>Supérieur
+					</a>
+				  <ul class="block">
+				  	<li><a href="grandecole.html">
+				  		Université
+				  		</a>
+				  	</li>
+				  	<li><a href="grandecole.html">
+				  		Grande école
+				  		</a>
+				  	</li>
+				  </ul>	
+				</li>
+				<li><a>Secondaire
+					</a>
+					<ul class="block">
+				  	<li><a href="cycle1.html">
+				  		1er cycle
+				  		</a>
+				  	</li>
+				  	<li><a href="cycle2.html">
+				  		2eme cycle
+				  		</a>
+				  	</li>
+				  </ul>	
+				</li>
+				<li><a>Primaire
+					</a>
+					<ul class="block">
+				  	<li><a href="cp.html">
+				  		CP
+				  		</a>
+				  	</li>
+				  	<li><a href="ce.html">
+				  		CE
+				  		</a>
+				  	</li>
+				  	<li><a href="cm.html">
+				  		CM
+				  	</a>
+				  	</li>
+				  </ul>	
+
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+<div class="gauche">
+		<div class="card" style="width: 18rem;">
+  <img src="images/prix.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">BOURSES</h5>
+    <p class="card-text">Les eleves et etudiants qui ont eu de tres bons résultats sont  elligibles à la bourse présidentielle. Voici la liste </p>
+
+
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">VOIR</button>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">BOURSE</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>Les eleves et etudiants qui ont eu de tres bons résultats sont  elligibles à la bourse présidentielle. Voici la liste<br> 
+<a href="https://www.ciospb.gov.bf/fileadmin/user_upload/storage/fichiers/bourse_d_excellence.pdf">Cliquez pour voir</a></p>
+  </div>
+</div>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="images/classique.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">POLE D'INFLUENCE</h5>
+    <p class="card-text">Le taux de réussite aux examens au lyce scientifique de yamoussokro à grands tirages avoisinent toujours les 90%.</p>
+    
+
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">VOIR</button>
+
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasTopLabel">Meilleures eleves du primaire</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+  Ce mardi 06 juillet 2021, ont été annoncés définitivement les résultats du BEPC 2021 sur l’ensemble du territoire ivoirien. Aux dernières nouvelles, le taux de réussite de cette année 2021 s’élève à 41, 27 % contre 53, 17 % l’année dernière.Comme toute autre année, des établissements arrivent à se distinguer des autres malgré le pourcentage jugé faible par certains citoyens ivoiriens, le cas du lycée scientifique de Yamoussoukro. Une fois encore, cet établissement s’en sort avec un taux de réussite de 100 %. Un résultat qui n’étonne pas les populations ivoirienne
+  </div>
+</div>
+
+  </div>
+  </div>
+</div>
+<div class="droite">
+  <div class="card" style="width: 35rem;">
+  <img src="images/esatic.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Meilleures écoles au supérieur en Cote d'ivoire</h5>
+    <p class="card-text">L’ESATIC est chargée d’assurer les missions d’intérêt général de formation initiale, continue et de recherche dans les métiers des Technologies de l’Information et de la Communication (TIC).<br>L’Institut national polytechnique Félix Houphouët-Boigny est un établissement public de formation supérieure, de recherche et de production situé à Yamoussoukro en Côte d'Ivoire. Rassemblant huit écoles supérieures et de nombreux départements de formation et de recherche. </p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item em">
+École Supérieure Africaine des Technologies de l'Information et de la Communication</li>
+    <li class="list-group-item em">Institut National Polytechnique Félix HOUPHOUET-BOIGNY (INP-HB) </li>
+  </ul>
+  <div class="card-body">
+    <a href="https://esatic.ci/" class="card-link visiter" target="_blank">Visiter l'ESATIC</a>
+    <a href="https://inphb.ci/2/vues/accueil/" class="card-link visiter"target="_blank">Visiter L'INP-HB</a>
+  </div>
+  </div>
+</div>
+	</main>
+</div>
+è<div class="bottom-bar">
+	<ul>
+		<li>Nos contacts</li>
+		<li>Signaler un probleme</li>
+	</ul>
+	<ul>
+		<li>Faites un don</li>
+	</ul>
+</div>
+</body>
+</html>
